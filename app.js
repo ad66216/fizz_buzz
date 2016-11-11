@@ -1,22 +1,29 @@
 $(document).ready(function() {
 
-	var fizz = "fizz";
-	var buzz = "buzz";
-	for (var i = 1; i < 100; i++) {
-		if(i % 3 == 0 && i % 5 == 0) {
+	var number = prompt("Enter a number");
+	// var number = $("input").val();
+	if (number % 1 != 0) {
+		alert("You fucked up, pick a number dumbass");
+	} else {
+		for (var i = 1; i <= parseInt(number); i++) {
+
+			if(i % 3 == 0 && i % 5 == 0) {
 				var output = `<li class="numbers">${"FizzBuzz"}</li>`
 				$(".numbers-list").append(output);
-		} else if (i % 3 == 0) {
+			} else if (i % 3 == 0) {
 				var output = `<li class="numbers">${"Fizz"}</li>`
 				$(".numbers-list").append(output);
-		} else if (i % 5 == 0) {
+			} else if (i % 5 == 0) {
 				var output = `<li class="numbers">${"Buzz"}</li>`
 				$(".numbers-list").append(output);
-		} else {
+			} else {
 				var output = `<li class="numbers">${i}</li>`
 				$(".numbers-list").append(output);
+			}
 		}
+
 	}
+	// console.log(number);
 });
 
 
